@@ -1,0 +1,7 @@
+Un agente (A1) ha bisogno di determinati oggetti (a, b, c, ecc..) disposti in uno spazio  
+Non ha la capacità di muoversi  
+Può comunicare con un altro agente (A2) in grado di muoversi  
+L'altro agente A2 ha un rinforzo nel momento in cui il primo agente (A1) soddisfa una necessità
+Il primo agente soddisfa una necessità ogni volta che gli vengono portati gli oggetti, e automaticamente lo comunica a A2
+A1 ha quindi la possibilità di emettere rinforzi negativi verso A2, rinforzi positivi o rinforzi neutri che simboleggeranno la sua capacità di comunicare  
+A2 potrebbe avere delle rappresentazioni verbali degli oggetti nello spazio che potrebbe suggerire ad A1 anziché muoversi ad ogni iterazione
