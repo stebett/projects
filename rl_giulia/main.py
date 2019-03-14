@@ -7,7 +7,6 @@ target = [4, 4]
 train_iterations = 200
 demo_iterations = 7
 
-
 grid = Grid(dimension)
 agent = Agent(dimension, target, discount)
 
