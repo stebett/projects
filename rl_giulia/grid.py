@@ -1,15 +1,25 @@
 import random as rd
-from pandas import DataFrame as df
+
+# Questo file definisce la classe Grid,
+# che e' semplicemente l'ambiente dove
+# l'agente si muove.
+# Le uniche cose che fa sono:
+# printare la posizione,
+# creare la griglia con una posizione casuale e
+# muovere l'agente all'interno
 
 
 class Grid():
     def __init__(self, dimension):
-        self.dim = [dimension, dimension]  # Starts from 1
+        # Inizializzo la griglia con dimensioni che
+        # partono da 1, non so bene perche'
+        self.dim = [dimension, dimension]
         self.current_state = []
 
         self.spawn()
 
     def draw(self):
+        # Printa una lista di liste come mi hai insegnato tu
         grid_full = []
         for y in range(1, self.dim[1] + 1):
             grid_row = []
@@ -19,7 +29,8 @@ class Grid():
                     grid_row.append('X')
                 else:
                     grid_row.append('#')
-        return df(grid_full)
+        for item in grid_full:
+            print(item)
 
     def spawn(self):
         new_x = rd.randint(1, self.dim[1])
@@ -30,7 +41,6 @@ class Grid():
         old_state = self.current_state
         if direction not in ['right', 'left', 'top', 'bot']:
             return 'Invalid direction'
-
         elif direction == 'right':
             new_x = old_state[1] + 1
             if new_x > self.dim[1]:
