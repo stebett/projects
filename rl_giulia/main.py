@@ -8,7 +8,6 @@ target = [4, 4]
 grid = Grid(dimension)
 agent = Agent(dimension, target, discount)
 
-
 def turn(where, who):
     who.get_real_pos(where.current_state)
     is_over = who.evaluate_q_value()
