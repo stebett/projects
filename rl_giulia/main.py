@@ -1,12 +1,13 @@
 import numpy as np
 from grid import Grid
 from agent import Agent
-dimension = 4
+dimension = 12
 discount = 0.9
 target = [4, 4]
 
 grid = Grid(dimension)
 agent = Agent(dimension, target, discount)
+
 
 def turn(where, who):
     who.get_real_pos(where.current_state)
