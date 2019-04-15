@@ -27,8 +27,7 @@ def read_and_merge():
     raw_data = pd.read_csv('data/train_features.csv')
 
     raw_target = pd.read_csv('data/train_targets.csv')
-    raw_target = raw_target.drop('match_id_hash', axis=1)
-    raw_target = raw_target.drop('game_time', axis=1)
+    raw_target = raw_target.drop(['game_time', 'match_id_hash'], axis=1)
 
     full_raw_df = pd.concat([raw_data, raw_target], axis=1)
 
@@ -58,6 +57,8 @@ def gen_work_df(full_df):
 
     for column in good_features:
         tmp_work_df = group_var(full_df, tmp_work_df, column)
+
+    tmp_work_df = tmp_work_df.drop(['d_kills', 'd_deaths'])
 
     tmp_work_df_stand = standardize(tmp_work_df)
 
