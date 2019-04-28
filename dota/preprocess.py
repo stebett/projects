@@ -58,7 +58,7 @@ def gen_work_df(full_df):
     for column in good_features:
         tmp_work_df = group_var(full_df, tmp_work_df, column)
 
-    tmp_work_df = tmp_work_df.drop(['d_kills', 'd_deaths'])
+    tmp_work_df = tmp_work_df.drop(['d_kills', 'd_deaths'], axis=1)
 
     tmp_work_df_stand = standardize(tmp_work_df)
 
