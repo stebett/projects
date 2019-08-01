@@ -1,6 +1,7 @@
 Idee
 MachineLearningCourse
 .pytest_cache
+Berkeley/homework
 **/__pycache__
 **/.cache
 **/data
