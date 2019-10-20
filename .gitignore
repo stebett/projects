@@ -6,6 +6,10 @@ Confusion_EEG
 Kuzoshiji
 MachineLearningCourse
 .pytest_cache
+Berkeley/homework
+**/train/
+**/test/
+**/validation/
 **/__pycache__
 **/.cache
 **/data
