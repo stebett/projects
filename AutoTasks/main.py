@@ -1,6 +1,7 @@
 import datetime
 from calendar_reader import dict_scheduled
 from note_reader import find_dates
+from tasks_writer import write_task
 
 
 def read_last_time():
@@ -29,12 +30,11 @@ def diff():
     return diff_dict
 
 
-def write_task():
-    # This has to take diff and write tasks
-    diff_dict = diff()
-    return diff_dict
-
-
 def main():
-    write_task()
-    write_time()
+    diff_ = diff()
+    write_task(diff_)
+    # write_time()
+
+
+if __name__ == "__main__":
+    main()
