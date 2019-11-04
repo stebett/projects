@@ -1,12 +1,10 @@
 import os
 import re
 
-
-path_ = '/home/ginko/Documents/Note/'
-subject_ = 'Dinamica/'  # dovrebbe essere un imput dello script
+# Path is defined below (L56)
 
 
-def find_tex_files(path=path_, subject=subject_):
+def find_tex_files(path, subject):
 
     note_dirs = os.listdir(path + subject)
     all_files = [os.listdir(path + subject + i) for i in note_dirs]
@@ -24,24 +22,6 @@ def find_tex_files(path=path_, subject=subject_):
             tex_files.append(i)
 
     return tex_files
-
-
-def find_dates(files, path=path_, subject=subject_):
-    pattern = re.compile('(?<=date{).+(?=})')
-    date_dict = {}
-    for tex in files:
-        tex_path = path + subject + tex[:-4] + '/' + tex
-
-        with open(tex_path, 'r') as f:
-            for line in f:
-                m = re.search(pattern, line)
-
-                if m:
-                    date_ = m.group(0)
-                    cleaned_date = clean_date(date_)
-                    date_dict[tex] = cleaned_date
-
-    return date_dict
 
 
 def clean_date(date):
@@ -71,3 +51,23 @@ def clean_date(date):
     new_date = year + '-' + month + '-' + day
 
     return new_date
+
+
+def find_dates(subject):
+    path = '/home/ginko/Documents/Note/'
+    files = find_tex_files(path, subject)
+    pattern = re.compile('(?<=date{).+(?=})')
+    date_list = []
+    for tex in files:
+        tex_path = path + subject + tex[:-4] + '/' + tex
+
+        with open(tex_path, 'r') as f:
+            for line in f:
+                m = re.search(pattern, line)
+
+                if m:
+                    date_ = m.group(0)
+                    cleaned_date = clean_date(date_)
+                    date_list.append(cleaned_date)
+
+    return date_list

@@ -6,6 +6,9 @@ Confusion_EEG
 MachineLearningCourse
 .pytest_cache
 Reinforcement_Learning_Sutton
+**/.last_time
+**/cal_api
+**/task_api
 **/train/
 **/test/
 **/validation/
