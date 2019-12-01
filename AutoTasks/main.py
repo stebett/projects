@@ -1,7 +1,9 @@
+#!/usr/bin/env python3
+
 import datetime
-from calendar_reader import dict_scheduled
-from note_reader import find_dates
-from tasks_writer import write_task
+from calendar_reader import *
+from note_reader import *
+from tasks_writer import *
 
 
 def read_last_time():
@@ -33,8 +35,11 @@ def diff():
 def main():
     diff_ = diff()
     write_task(diff_)
-    # write_time()
+    write_time()
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception:
+        print('Error') # Qua si potrebbe mettere un log

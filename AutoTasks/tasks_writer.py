@@ -37,8 +37,8 @@ def write_task(dict_):
     for key in dict_keys:
         for task in dict_[key]:
             if key == "Lavoro":
-                body = {"title": 'questo va sistemato',
-                        "notes": task}
+                body = {"title": 'Va pagato il lavoro del' + task}
+
             else:
                 body = {"title": 'Recupero Lezione del ' + task}
 

@@ -7,7 +7,7 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 
 # If modifying these scopes, delete the file token.pickle.
-SCOPES = ['https://www.googleapis.com/auth/calendar.readonly']
+SCOPES_cal = ['https://www.googleapis.com/auth/calendar.readonly']
 
 
 def dict_scheduled(start_time):
@@ -21,7 +21,7 @@ def dict_scheduled(start_time):
             creds.refresh(Request())
         else:
             flow = InstalledAppFlow.from_client_secrets_file(
-                'cal_api/credentials.json', SCOPES)
+                'cal_api/credentials.json', SCOPES_cal)
             creds = flow.run_local_server(port=0)
         with open('cal_api/token.pickle', 'wb') as token:
             pickle.dump(creds, token)
