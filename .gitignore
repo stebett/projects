@@ -1,5 +1,6 @@
 .pytest_cache
 Stalled/
+Finished/Colab_Notebooks/
 **/**/.last_time
 **/**/cal_api
 **/**/task_api
