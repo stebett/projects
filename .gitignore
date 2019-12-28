@@ -1,6 +1,8 @@
 .pytest_cache
-Stalled/
-Finished/Colab_Notebooks/
+stalled/
+finished/Colab_Notebooks/
+finished/Eating_Survey/initial_data/
+finished/Eating_Survey/final_data/clean_final_data.csv
 **/**/.last_time
 **/**/cal_api
 **/**/task_api
