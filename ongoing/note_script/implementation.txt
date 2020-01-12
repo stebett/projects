@@ -1,0 +1,9 @@
+[x] Find course dir, just list names (GetCourses)
+
+[x] get in course dir 
+[x] generate list of tuples with name and date (GetLectures)
+[x] select and open file (EditLecture)
+[x] create new file with course name and right number (InitLecture)
+- generate master file just including other lectures and with a table of content if include all (GenerateMaster)
+
+- make creation of new file automatic based on calendar
