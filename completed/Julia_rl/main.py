@@ -1,7 +1,7 @@
 import numpy as np
 from grid import Grid
 from agent import Agent
-dimension = 12
+dimension = 4
 discount = 0.9
 target = [4, 4]
 
