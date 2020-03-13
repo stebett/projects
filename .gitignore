@@ -1,9 +1,11 @@
 .pytest_cache
 stalled/**
+ongoing/**
 finished/Colab_Notebooks/
 finished/Eating_Survey/initial_data/
 finished/Eating_Survey/final_data/clean_final_data.csv
-ongoing/Tesi/pdf/**
+
+
 **/**/.last_time
 **/**/cal_api
 **/**/task_api

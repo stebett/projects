@@ -1,8 +1,0 @@
-[x] Fetch Courses dir
-[x] Recognise courses names
-
-[x] Fetch lecutres dirs
-[x] Recognise lectures date, number
-- edit old lectures
-- edit new lectures
-- generate master file
